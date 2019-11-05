@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uberapp_clone/pages/phone_confirme_page.dart';
 
 class LoginPagePhone extends StatefulWidget {
   @override
@@ -17,14 +18,14 @@ class _LoginPagePhoneState extends State<LoginPagePhone> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Padding(
-              padding: EdgeInsets.only(left: 20, bottom: 30),
+              padding: EdgeInsets.only(top: 5, left: 20, bottom: 30),
               child: Text(
                 "Insira seu nº de celular",
                 style: TextStyle(fontSize: 18),
               ),
             ),
             _phoneSignInInput(),
-            _agreeBox(),
+            _floatingBox(),
           ],
         ),
       ),
@@ -49,7 +50,7 @@ class _LoginPagePhoneState extends State<LoginPagePhone> {
         ),
         Flexible(
           child: Padding(
-            padding: EdgeInsets.fromLTRB(10.0, 0, 10.0, 0),
+            padding: EdgeInsets.fromLTRB(10.0, 0, 20.0, 0),
             child: TextFormField(
               maxLines: 1,
               keyboardType: TextInputType.phone,
@@ -64,7 +65,7 @@ class _LoginPagePhoneState extends State<LoginPagePhone> {
     );
   }
 
-  Widget _agreeBox() {
+  Widget _floatingBox() {
     return Container(
       child: Expanded(
         child: Align(
@@ -89,7 +90,9 @@ class _LoginPagePhoneState extends State<LoginPagePhone> {
     return FloatingActionButton(
       backgroundColor: Colors.black,
       mini: true,
-      onPressed: () {},
+      onPressed: () {
+        Navigator.of(context).push(MaterialPageRoute(builder: (context) => PhoneConfirmePage("(79) 99802-6198")));
+      },
       child: Icon(
         Icons.arrow_forward,
         size: 18,

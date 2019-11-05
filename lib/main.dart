@@ -9,8 +9,7 @@ class MyApp extends StatelessWidget {
       title: 'Uber App Clone',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        bottomAppBarColor: Colors.black,
+        primaryColor: Colors.black,
       ),
       home: LoginPage(),
     );

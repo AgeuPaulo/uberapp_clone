@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uberapp_clone/pages/ui_home/home_page.dart';
 
 class PhoneConfirmePage extends StatefulWidget {
   final String phoneNamber;
@@ -125,7 +126,13 @@ class _PhoneConfirmePageState extends State<PhoneConfirmePage> {
     return FloatingActionButton(
       backgroundColor: Colors.black,
       mini: true,
-      onPressed: () {},
+      onPressed: () {
+        Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => HomePage(),
+              ),
+            );
+      },
       child: Icon(
         Icons.arrow_forward,
         size: 18,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uberapp_clone/pages/login_page.dart';
+import 'package:uberapp_clone/pages/ui_login_register/login_page.dart';
 
 void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {

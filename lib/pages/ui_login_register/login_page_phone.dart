@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uberapp_clone/pages/phone_confirme_page.dart';
+import 'package:uberapp_clone/pages/ui_login_register/phone_confirme_page.dart';
 
 class LoginPagePhone extends StatefulWidget {
   @override

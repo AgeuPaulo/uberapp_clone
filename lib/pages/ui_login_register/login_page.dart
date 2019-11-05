@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:uberapp_clone/pages/login_page_phone.dart';
+import 'package:uberapp_clone/pages/ui_login_register/login_page_phone.dart';
+import 'package:uberapp_clone/pages/ui_login_register/sm_confirme_page.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -119,7 +120,13 @@ class _LoginPageState extends State<LoginPage> {
           )
         ],
       ),
-      onPressed: onPressed,
+      onPressed: (){
+        Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => SMConfirmePage(),
+              ),
+            );
+      }
     );
   }
 }

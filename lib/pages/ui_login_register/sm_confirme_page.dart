@@ -51,7 +51,7 @@ class _SMConfirmePageState extends State<SMConfirmePage> {
         decoration: InputDecoration(
           labelText: label,
         ),
-        textAlign: TextAlign.center,
+        textAlign: TextAlign.left,
       ),
     );
   }

@@ -19,7 +19,7 @@ class _EditTextProfilePageState extends State<EditTextProfilePage> {
       body: Column(
         children: <Widget>[
           _formField(widget.label, widget.controller),
-          _signInButton()
+          _saveButton()
         ],
       ),
     );
@@ -35,23 +35,27 @@ class _EditTextProfilePageState extends State<EditTextProfilePage> {
         decoration: InputDecoration(
           labelText: label,
         ),
-        textAlign: TextAlign.center,
+        textAlign: TextAlign.left,
+        initialValue: controller,
       ),
     );
   }
 
-  Widget _signInButton() {
-    return Padding(
-      padding: EdgeInsets.fromLTRB(20.0, 30.0, 20.0, 0),
-      child: RaisedButton(
-        color: Colors.black,
-        child: Text(
-          "SALVAR",
-          style: TextStyle(
-            color: Colors.white
+  Widget _saveButton() {
+    return Center(
+      child: Padding(
+        padding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 0),
+        child: SizedBox(
+          width: double.maxFinite,
+          child: RaisedButton(
+            color: Colors.black,
+            child: Text(
+              "SALVAR",
+              style: TextStyle(color: Colors.white),
+            ),
+            onPressed: () {},
           ),
         ),
-        onPressed: (){}
       ),
     );
   }

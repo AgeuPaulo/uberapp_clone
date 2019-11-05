@@ -11,7 +11,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Editar conta", style: TextStyle(fontSize: 25)),
+        title: Text("Editar conta"),
       ),
       body: SingleChildScrollView(
         child: Column(

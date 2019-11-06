@@ -18,6 +18,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             _avatar(),
+            Divider(),
             _editField("Nome", "Ageu"),
             _editField("Sobrenome", "Paulo"),
             _editField("Telefone", "+55 79 99902-8593"),

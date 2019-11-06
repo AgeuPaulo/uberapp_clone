@@ -16,12 +16,16 @@ class _LoginPageState extends State<LoginPage> {
           children: <Widget>[
             _logoApp(),
             _phoneSignInButton(),
-            Text(
-              "Ou entre com uma rede social",
-              style: TextStyle(
-                fontSize: 12,
+            Row(children: <Widget>[
+              Expanded(child: Divider()),
+              Text(
+                "  Ou entre com uma rede social  ",
+                style: TextStyle(
+                  fontSize: 12,
+                ),
               ),
-            ),
+              Expanded(child: Divider()),
+            ]),
             _signInButton("assets/google_logo.png", "Google", () {}),
             _signInButton("assets/facebook_logo.png", "Facebook", () {}),
           ],
@@ -102,31 +106,30 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget _signInButton(String asset, String title, Function onPressed) {
     return FlatButton(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: <Widget>[
-          Padding(
-            padding: EdgeInsets.only(left: 5),
-            child: Image(image: AssetImage(asset), height: 20.0),
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 20),
-            child: Text(
-              title,
-              style: TextStyle(
-                fontSize: 15,
-              ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget>[
+            Padding(
+              padding: EdgeInsets.only(left: 5),
+              child: Image(image: AssetImage(asset), height: 20.0),
             ),
-          )
-        ],
-      ),
-      onPressed: (){
-        Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => SMConfirmePage(),
+            Padding(
+              padding: EdgeInsets.only(left: 20),
+              child: Text(
+                title,
+                style: TextStyle(
+                  fontSize: 15,
+                ),
               ),
-            );
-      }
-    );
+            )
+          ],
+        ),
+        onPressed: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => SMConfirmePage(),
+            ),
+          );
+        });
   }
 }

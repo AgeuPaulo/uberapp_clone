@@ -17,10 +17,12 @@ class _ConfiguracaoPageState extends State<ConfiguracaoPage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             _header(),
+            Divider(),
             _topics("Favoritos"),
             _flatButton("Adicionar casa", Icons.home),
             _flatButton("Adicionar trabalho", Icons.work),
             _link(),
+            Divider(),
             _linkButton("Privacidade", "Controle as informações que você compartilha com a gente"),
             _linkButton("Segurança", "Controle a segurança da sua conta com a verificação em duas etapas"),
             _linkButton("Sair", ""),
@@ -34,7 +36,7 @@ class _ConfiguracaoPageState extends State<ConfiguracaoPage> {
     return Row(
       children: <Widget>[
         Padding(
-          padding: EdgeInsets.fromLTRB(20.0, 20.0, 0, 30.0),
+          padding: EdgeInsets.fromLTRB(20.0, 20.0, 0, 10.0),
           child: Container(
             height: 80,
             width: 80,
@@ -62,7 +64,7 @@ class _ConfiguracaoPageState extends State<ConfiguracaoPage> {
 
   Widget _link() {
     return Padding(
-      padding: EdgeInsets.fromLTRB(20.0, 10.0, 20, 0),
+      padding: EdgeInsets.fromLTRB(20.0, 10.0, 20, 20.0),
       child: Text(
         "Mais locais salvos",
         style: TextStyle(fontSize: 15, height: 1.5, color: Colors.blue),
@@ -103,7 +105,7 @@ class _ConfiguracaoPageState extends State<ConfiguracaoPage> {
 
   Widget _topics(String title) {
     return Padding(
-      padding: EdgeInsets.fromLTRB(20.0, 30.0, 20.0, 10.0),
+      padding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
       child: Text(
         title,
         style: TextStyle(

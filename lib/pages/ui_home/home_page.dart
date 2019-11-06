@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:uberapp_clone/pages/ui_drawer_componets/ajuda_page.dart';
 import 'package:uberapp_clone/pages/ui_drawer_componets/configuracao_page.dart';
 import 'package:uberapp_clone/pages/ui_drawer_componets/desconto_page.dart';
+import 'package:uberapp_clone/pages/ui_drawer_componets/pagamento_page.dart';
 import 'package:uberapp_clone/pages/ui_drawer_componets/viagens_page.dart';
 import 'package:uberapp_clone/pages/ui_profile/edit_profile_page.dart';
 
@@ -14,7 +15,13 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        iconTheme: IconThemeData(
+            color: Colors.black,
+          ),
+          elevation: 0,
+          backgroundColor: Colors.transparent,
+      ),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -37,7 +44,7 @@ class _HomePageState extends State<HomePage> {
             ),
             _listTile("Suas viagens", ViagensPage()),
             _listTile("Ajuda", AjudaPage()),
-            _listTile("Pagamento", () {}),
+            _listTile("Pagamento", PagamentoPage()),
             _listTile("Viagens com desconto", DescontoPage()),
             _listTile("Configurações", ConfiguracaoPage()),
           ],
@@ -46,7 +53,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Widget _listTile(String title, Object page) {
+  Widget _listTile(String title, Widget page) {
     return ListTile(
       title: Text(title),
       onTap: () {

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:uberapp_clone/services/GoogleService.dart';
+import 'package:uberapp_clone/pages/ui_home/home_page.dart';
 import 'package:uberapp_clone/pages/ui_login_register/login_page_phone.dart';
-import 'package:uberapp_clone/pages/ui_login_register/sm_confirme_page.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -125,11 +126,15 @@ class _LoginPageState extends State<LoginPage> {
           ],
         ),
         onPressed: () {
-          Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (context) => SMConfirmePage(),
-            ),
-          );
+          signInWithGoogle().whenComplete(() {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) {
+                  return HomePage();
+                },
+              ),
+            );
+          });
         });
   }
 }

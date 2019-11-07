@@ -17,10 +17,10 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         iconTheme: IconThemeData(
-            color: Colors.black,
-          ),
-          elevation: 0,
-          backgroundColor: Colors.transparent,
+          color: Colors.black,
+        ),
+        elevation: 0,
+        backgroundColor: Colors.transparent,
       ),
       drawer: Drawer(
         child: ListView(
